@@ -1,5 +1,7 @@
 # PixelColor
 
+[![Travis CI Build Status](https://img.shields.io/travis/com/muflone/pixelcolor/master.svg)](https://www.travis-ci.com/github/muflone/pixelcolor)
+
 **Description:** Get the screen pixel color
 
 **Copyright:** 2022 Fabio Castelli (Muflone) <muflone@muflone.com>
