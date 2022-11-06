@@ -1,6 +1,7 @@
 # PixelColor
 
 [![Travis CI Build Status](https://img.shields.io/travis/com/muflone/pixelcolor/master.svg)](https://www.travis-ci.com/github/muflone/pixelcolor)
+[![CircleCI Build Status](https://img.shields.io/circleci/project/github/muflone/pixelcolor/master.svg)](https://circleci.com/gh/muflone/pixelcolor)
 
 **Description:** Get the screen pixel color
 
