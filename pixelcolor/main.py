@@ -25,6 +25,17 @@ from pixelcolor.command_line_options import CommandLineOptions
 from pixelcolor.pixel_color import PixelColor
 
 
+def hex_digits(number: int, digits: int) -> str:
+    """
+    Format a number as hexadecimal digits
+
+    :param number: number to format
+    :param digits: number of digits
+    :return: formatted number with zero padded digits
+    """
+    return hex(number).replace('0x', '').rjust(digits, '0')
+
+
 def main():
     # Get command-line options
     command_line = CommandLineOptions()
@@ -40,7 +51,7 @@ def main():
         # Return color as triplets (R G B)
         if options.hex:
             # Return triplets as hexadecimal
-            result = ' '.join(map(functools.partial(pixelcolor.hex_digits,
+            result = ' '.join(map(functools.partial(hex_digits,
                                                     digits=2),
                                   colors))
         else:
@@ -51,8 +62,8 @@ def main():
         decimal_color = colors[0] * 256 * 256 + colors[1] * 256 + colors[2]
         if options.hex:
             # Return color as hexadecimal
-            result = pixelcolor.hex_digits(number=decimal_color,
-                                           digits=6)
+            result = hex_digits(number=decimal_color,
+                                digits=6)
         else:
             # Return color as decimal
             result = str(decimal_color)
