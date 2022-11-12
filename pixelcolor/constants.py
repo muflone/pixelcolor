@@ -19,7 +19,7 @@
 ##
 
 APP_NAME = 'PixelColor'
-APP_VERSION = '0.1.0'
+APP_VERSION = '0.2.0'
 APP_DESCRIPTION = 'Get the screen pixel color'
 APP_DOMAIN = 'pixelcolor'
 APP_ID = f'{APP_DOMAIN}.muflone.com'
