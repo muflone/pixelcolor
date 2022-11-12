@@ -19,6 +19,8 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
+import functools
+
 from pixelcolor.command_line_options import CommandLineOptions
 from pixelcolor.pixel_color import PixelColor
 
@@ -38,7 +40,9 @@ def main():
         # Return color as triplets (R G B)
         if options.hex:
             # Return triplets as hexadecimal
-            print(' '.join(map(hex, colors)).replace('0x', ''))
+            print(' '.join(map(functools.partial(pixelcolor.hex_digits,
+                                                 digits=2),
+                               colors)))
         else:
             # Return triplets as decimal
             print(' '.join(map(str, colors)))
@@ -47,7 +51,7 @@ def main():
         decimal_color = colors[0] * 256 * 256 + colors[1] * 256 + colors[2]
         if options.hex:
             # Return color as hexadecimal
-            print(hex(decimal_color).replace('0x', ''))
+            print(pixelcolor.hex_digits(number=decimal_color, digits=6))
         else:
             # Return color as decimal
             print(decimal_color)

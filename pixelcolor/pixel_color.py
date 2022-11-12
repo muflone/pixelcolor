@@ -57,3 +57,14 @@ class PixelColor(object):
         """
         return PIL.ImageGrab.grab(bbox=(x1, y1, x2, y2),
                                   xdisplay=display)
+
+    @classmethod
+    def hex_digits(self, number: int, digits: int) -> str:
+        """
+        Format a number as hexadecimal digits
+
+        :param number: number to format
+        :param digits: number of digits
+        :return: formatted number with zero padded digits
+        """
+        return hex(number).replace('0x', '').rjust(digits, '0')
