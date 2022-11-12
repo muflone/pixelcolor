@@ -71,6 +71,7 @@ class CommandLineOptions(object):
         """
         group = self.add_group('Output')
         group.add_argument('--triplets',
+                           '-T',
                            action='store_true',
                            required=False,
                            default=False,
