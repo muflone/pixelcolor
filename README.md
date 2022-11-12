@@ -31,7 +31,9 @@ be printed as result.
 
 PixelColor is a command line utility and it requires some arguments to be passed:
 
-`pixelcolor --x <X> --y <Y> [--display <DISPLAY>] [--triplets] [--hex]`
+```
+pixelcolor --x <X> --y <Y> [--display <DISPLAY>] [--triplets] [--hex] [--upper]
+```
 
 The arguments `--x` and `--y` refer to the pixel coordinates as left and top
 positions (the first pixel is always 1x1).
@@ -44,8 +46,12 @@ colors (red, green, blue).
 
 The argument `--hex` will show the colors as hexadecimal values.
 
+The argument `--upper` will return the hexadecimal digits as upper case.
+
 An example to execute PixelColor will be the following:
 
-`pixelcolor --x 100 --y 200 --hex`
+```
+pixelcolor --x 100 --y 200 --hex
+```
 
 This will print the pixel color at coordinates 100x200.
