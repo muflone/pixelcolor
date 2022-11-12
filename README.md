@@ -39,7 +39,7 @@ The arguments `--x` and `--y` refer to the pixel coordinates as left and top
 positions (the first pixel is always 1x1).
 
 The argument `--display` is the graphical display to use (the `DISPLAY`
-varirable).
+variable).
 
 The argument `--triplets` will return the pixel color value as a triplets of
 colors (red, green, blue).
