@@ -40,21 +40,24 @@ def main():
         # Return color as triplets (R G B)
         if options.hex:
             # Return triplets as hexadecimal
-            print(' '.join(map(functools.partial(pixelcolor.hex_digits,
-                                                 digits=2),
-                               colors)))
+            result = ' '.join(map(functools.partial(pixelcolor.hex_digits,
+                                                    digits=2),
+                                  colors))
         else:
             # Return triplets as decimal
-            print(' '.join(map(str, colors)))
+            result = ' '.join(map(str, colors))
     else:
         # Return color as decimal
         decimal_color = colors[0] * 256 * 256 + colors[1] * 256 + colors[2]
         if options.hex:
             # Return color as hexadecimal
-            print(pixelcolor.hex_digits(number=decimal_color, digits=6))
+            result = pixelcolor.hex_digits(number=decimal_color,
+                                           digits=6)
         else:
             # Return color as decimal
-            print(decimal_color)
+            result = str(decimal_color)
+    # Print result
+    print(result.upper() if options.upper else result)
 
 
 if __name__ == '__main__':

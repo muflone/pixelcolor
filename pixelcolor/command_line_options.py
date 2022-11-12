@@ -82,6 +82,12 @@ class CommandLineOptions(object):
                            required=False,
                            default=False,
                            help='return the color in hexadecimal format')
+        group.add_argument('--upper',
+                           '-U',
+                           action='store_true',
+                           required=False,
+                           default=False,
+                           help='return the result in uppercase')
 
     def parse_options(self) -> argparse.Namespace:
         """
