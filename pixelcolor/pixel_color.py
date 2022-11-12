@@ -26,14 +26,14 @@ class PixelColor(object):
     def __init__(self):
         pass
 
-    def get_color(self, display: str, x: int, y: int) -> int:
+    def get_color(self, display: str, x: int, y: int) -> tuple[int]:
         """
         Get the pixel color at the coordinates X and Y
 
         :param display: X display to grab the image from
         :param x: left position
         :param y: top position
-        :return: pixel color
+        :return: pixel color as RGB tuple
         """
         image = self.get_image(display=display, x1=x, y1=y, x2=x + 1, y2=y + 1)
         pixels = image.load()
